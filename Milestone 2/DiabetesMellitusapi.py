@@ -56,10 +56,25 @@ class Things(Resource):
         things[thing_id] = {"name":args["name"], "year":args["year"], "size":args["size"]}
         return things[thing_id]
 
+class Home(Resource):
+    pass
+class DecisionTree(Resource):
+    pass
+class RandomForest(Resource):
+    pass
+class SupportVectorMachines(Resource):
+    pass
+class NeuralNetwork(Resource):
+    pass
+
 api.add_resource(HelloWorld,'/helloworld')
 api.add_resource(HelloNumbers,'/helloworld/<int:number>')
 api.add_resource(Things,'/todos/<int:thing_id>')
-#api.add_resource(HelloNumbers,'/helloworld/<int:number>')
+api.add_resource(Home,'/home')
+api.add_resource(DecisionTree,'/home/DecisionTree')
+api.add_resource(RandomForest,'/home/RandomForest')
+api.add_resource(SupportVectorMachines,'/home/SupportVectorMachines')
+api.add_resource(NeuralNetwork,'/home/NeuralNetwork')
 
 #@app.route("/", methods = [""])
 #def index():
